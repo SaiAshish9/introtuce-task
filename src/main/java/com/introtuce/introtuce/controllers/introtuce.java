@@ -12,13 +12,13 @@ import java.util.Map;
 @RestController("/")
 public class introtuce {
 
-    @GetMapping("/introtuce")
-    public ResponseEntity<?> hello(){
-
-        Map<String,String> msg= new HashMap<>();
-        msg.put("msg","hi");
-        return ResponseEntity.ok(msg);
-    }
+//    @GetMapping("/introtuce")
+//    public ResponseEntity<?> hello(){
+//
+//        Map<String,String> msg= new HashMap<>();
+//        msg.put("msg","hi");
+//        return ResponseEntity.ok(msg);
+//    }
 
     @GetMapping
     public ModelAndView home(ModelMap modelMap){
