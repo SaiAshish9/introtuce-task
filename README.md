@@ -19,3 +19,9 @@ registry.addMapping("/**").allowedOrigins("http://localhost:****","https://***.a
 using @PropertySource and @Value annotations
 
 ```
+
+## Extract token using /get-token endpoint
+
+```
+Extract token and pass header as "Bearer "+token inorder to access private routes
+```
