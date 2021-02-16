@@ -2,6 +2,8 @@ package com.introtuce.introtuce.controllers.status;
 
 import com.introtuce.introtuce.services.jwt.MyUserDetailsService;
 import com.introtuce.introtuce.utils.JwtUtil;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -46,5 +48,18 @@ public class StatusController {
         }
         return ResponseEntity.ok(token);
     }
+
+    @GetMapping("fetch-user-id")
+    @ApiImplicitParams(
+            @ApiImplicitParam(name = "Authorization", value = "Bearer {{token}}", required = true, paramType = "header", example = "Bearer access_token")
+    )
+    public ResponseEntity<?> fetchUserId(){
+
+        Map<String,Integer> data= new HashMap(){{
+            put("id",1);
+        }};
+        return ResponseEntity.ok(data);
+    }
+
 
 }
