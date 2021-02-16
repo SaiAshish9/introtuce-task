@@ -14,7 +14,9 @@ public class Comment {
     @Id
     private Integer id;
 
-    private User user;
+    private Integer userId;
+
+    private Integer statusId;
 
     private String comment;
 

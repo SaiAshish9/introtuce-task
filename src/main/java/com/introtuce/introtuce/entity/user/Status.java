@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Document
+@Document("Status")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,10 +16,12 @@ public class Status {
     @Id
     private Integer id;
 
-    private User user;
+    private Long userId;
 
     private String description;
 
-    private List<Comment> comments;
+    private String mediaUrl;
+
+    private List<Integer> comments;
 
 }
